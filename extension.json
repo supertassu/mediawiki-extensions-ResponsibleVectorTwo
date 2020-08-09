@@ -1,0 +1,47 @@
+{
+	"name": "ResponsibleVectorTwo",
+	"author": [
+		"Taavi Väänänen"
+	],
+	"url": "https://taavi.wtf/projects/mediawiki-extensions-responsiblevectortwo",
+	"descriptionmsg": "responsiblevectortwo-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.35.0",
+		"skins": {
+			"Vector": "*"
+		}
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\ResponsibleVectorTwo\\": "includes/"
+	},
+	"HookHandlers": {
+		"ResponsibleVectorTwoHooks": {
+			"class": "MediaWiki\\Extension\\ResponsibleVectorTwo\\Hooks"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "ResponsibleVectorTwoHooks"
+	},
+	"MessagesDirs": {
+		"ResponsibleVectorTwo": [
+			"i18n"
+		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "ResponsibleVectorTwo/resources"
+	},
+	"ResourceModules": {
+		"ext.responsibleVectorTwo.styles": {
+			"dependencies": [],
+			"messages": [],
+			"styles": [
+				"ext.responsibleVectorTwo/responsibleVectorTwo.less"
+			],
+			"scripts": []
+		}
+	},
+	"manifest_version": 2
+}

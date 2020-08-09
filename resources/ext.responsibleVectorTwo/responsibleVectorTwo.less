@@ -1,0 +1,36 @@
+@import 'mediawiki.ui/variables.less';
+
+@media screen and ( max-width: @width-breakpoint-tablet ) {
+	/* add top to .mw-header to allow user bar to take as much space as it needs */
+	.mw-header {
+		top: 3rem !important;
+	}
+
+	/* add padding to some elements to account for header and user bar */
+	.mw-content-container {
+		padding-top: 3em;
+	}
+
+	.mw-footer-container .mw-content-container {
+		padding-top: 0;
+	}
+
+	/* allow user bar to use full width, align its content to right */
+	nav#p-personal ul {
+		padding-left: 0;
+		text-align: right;
+	}
+
+	/* allow body to use full width */
+	main.mw-body, #mw-data-after-content, div#left-navigation, footer.mw-footer {
+		margin-left: 0;
+	}
+
+	/* add background and z-index to sidebar */
+	.mw-sidebar {
+		background: #fefefe;
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+		z-index: 10;
+	}
+}
